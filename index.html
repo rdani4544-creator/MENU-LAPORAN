@@ -14,14 +14,14 @@
 
 body {
     margin: 0;
-    padding: 20px 15px;
+    padding: 18px 15px;
     font-family: Arial, Helvetica, sans-serif;
     background: transparent;
 }
 
 
 /* =========================
-   JUDUL
+   JUDUL HALAMAN
 ========================= */
 
 .judul-halaman {
@@ -33,18 +33,19 @@ body {
     margin: 0;
     font-size: clamp(20px, 3vw, 28px);
     font-weight: 700;
-    color: #174a7e;
+    color: #ffffff;
+    line-height: 1.2;
 }
 
 .judul-halaman p {
     margin: 5px 0 0;
     font-size: 13px;
-    color: #777;
+    color: #ffffff;
 }
 
 
 /* =========================
-   GRID MENU
+   MENU LAPORAN
 ========================= */
 
 .menu-laporan {
@@ -54,7 +55,6 @@ body {
 
     display: grid;
 
-    /* 4 tombol sejajar */
     grid-template-columns: repeat(4, 1fr);
 
     gap: 12px;
@@ -62,7 +62,7 @@ body {
 
 
 /* =========================
-   KARTU / TOMBOL
+   TOMBOL
 ========================= */
 
 .kartu {
@@ -76,9 +76,9 @@ body {
 
     border-radius: 13px;
 
-    padding: 16px 8px;
+    padding: 15px 8px;
 
-    min-height: 125px;
+    min-height: 120px;
 
     text-align: center;
 
@@ -93,12 +93,9 @@ body {
 }
 
 
-/* =========================
-   GARIS ATAS
-========================= */
+/* GARIS ATAS */
 
 .kartu::before {
-
     content: "";
 
     position: absolute;
@@ -113,17 +110,13 @@ body {
 }
 
 
-/* =========================
-   EFEK HOVER
-========================= */
+/* EFEK HOVER */
 
 .kartu:hover {
-
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
     box-shadow:
-        0 12px 25px rgba(0,0,0,0.16);
+        0 12px 25px rgba(0,0,0,0.18);
 }
 
 
@@ -132,10 +125,9 @@ body {
 ========================= */
 
 .icon {
-
     font-size: 34px;
 
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 
     display: inline-block;
 
@@ -143,9 +135,7 @@ body {
         transform 0.35s ease;
 }
 
-
 .kartu:hover .icon {
-
     transform:
         scale(1.15)
         rotate(-5deg);
@@ -157,7 +147,6 @@ body {
 ========================= */
 
 .nama {
-
     font-size: 16px;
 
     font-weight: bold;
@@ -175,7 +164,6 @@ body {
 ========================= */
 
 .keterangan {
-
     font-size: 11px;
 
     color: #777;
@@ -185,15 +173,13 @@ body {
 
 
 /* =========================
-   ANIMASI MASUK
+   ANIMASI
 ========================= */
 
 .kartu {
-
     animation:
         muncul 0.6s ease both;
 }
-
 
 .kartu:nth-child(1) {
     animation-delay: 0.05s;
@@ -215,19 +201,13 @@ body {
 @keyframes muncul {
 
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(15px);
+        transform: translateY(15px);
     }
 
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
 
@@ -239,9 +219,7 @@ body {
 @media (max-width: 800px) {
 
     .menu-laporan {
-
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -254,42 +232,28 @@ body {
 @media (max-width: 500px) {
 
     body {
-
-        padding:
-            15px 10px;
+        padding: 15px 10px;
     }
 
     .menu-laporan {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .kartu {
-
-        min-height:
-            105px;
-
-        padding:
-            14px 8px;
+        min-height: 105px;
+        padding: 14px 8px;
     }
 
     .icon {
-
-        font-size:
-            30px;
+        font-size: 30px;
     }
 
     .nama {
-
-        font-size:
-            15px;
+        font-size: 15px;
     }
 
     .keterangan {
-
-        font-size:
-            11px;
+        font-size: 11px;
     }
 
 }
@@ -318,7 +282,6 @@ body {
 </div>
 
 
-
 <!-- =========================
      MENU
 ========================= -->
@@ -326,9 +289,7 @@ body {
 <div class="menu-laporan">
 
 
-    <!-- =====================
-         LOKMIN
-    ====================== -->
+    <!-- LOKMIN -->
 
     <a
         class="kartu"
@@ -350,10 +311,7 @@ body {
     </a>
 
 
-
-    <!-- =====================
-         LAPORAN MUTU
-    ====================== -->
+    <!-- LAPORAN MUTU -->
 
     <a
         class="kartu"
@@ -375,10 +333,7 @@ body {
     </a>
 
 
-
-    <!-- =====================
-         LAPORAN BULANAN
-    ====================== -->
+    <!-- LAPORAN BULANAN -->
 
     <a
         class="kartu"
@@ -400,10 +355,7 @@ body {
     </a>
 
 
-
-    <!-- =====================
-         LAPORAN TAHUNAN
-    ====================== -->
+    <!-- LAPORAN TAHUNAN -->
 
     <a
         class="kartu"
