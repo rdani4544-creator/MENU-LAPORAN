@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Menu Cepat Laporan</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: transparent;
+}
+
+/* JUDUL */
+.judul-halaman {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.judul-halaman h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #174a7e;
+}
+
+.judul-halaman p {
+    margin-top: 7px;
+    font-size: 15px;
+    color: #777;
+}
+
+/* GRID TOMBOL */
+.menu-laporan {
+    max-width: 950px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* KARTU */
+.kartu {
+    position: relative;
+    display: block;
+    text-decoration: none;
+
+    background: white;
+    border-radius: 20px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.10);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* GARIS ATAS */
+.kartu::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: #2477b8;
+}
+
+/* EFEK HOVER */
+.kartu:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.18);
+}
+
+/* ICON */
+.icon {
+    font-size: 55px;
+    margin-bottom: 12px;
+
+    display: inline-block;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.kartu:hover .icon {
+    transform:
+        translateY(-5px)
+        scale(1.18)
+        rotate(-5deg);
+}
+
+/* JUDUL */
+.nama {
+    font-size: 23px;
+    font-weight: bold;
+
+    color: #174a7e;
+
+    margin-bottom: 8px;
+}
+
+/* KETERANGAN */
+.keterangan {
+    font-size: 14px;
+    color: #777;
+}
+
+/* ANIMASI MASUK */
+.kartu {
+    animation: muncul 0.7s ease both;
+}
+
+.kartu:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.kartu:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.kartu:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.kartu:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TAMPILAN HP */
+@media (max-width: 650px) {
+
+    .menu-laporan {
+        grid-template-columns: 1fr;
+    }
+
+    .judul-halaman h1 {
+        font-size: 25px;
+    }
+
+    .nama {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="judul-halaman">
+
+    <h1>MENU CEPAT LAPORAN</h1>
+
+    <p>
+        Akses cepat dokumen dan laporan
+    </p>
+
+</div>
+
+
+<div class="menu-laporan">
+
+    <!-- LOKMIN -->
+    <a
+        class="kartu"
+        href="https://drive.google.com/drive/folders/1zs2JVJeLPd42OsdC4b0Fmn3x-qrwSdyk?usp=drive_link"
+        target="_blank">
+
+        <div class="icon">📍</div>
+
+        <div class="nama">
+            LOKMIN
+        </div>
+
+        <div class="keterangan">
+            Lokakarya Mini
+        </div>
+
+    </a>
+
+
+    <!-- LAPORAN MUTU -->
+    <a
+        class="kartu"
+        href="https://drive.google.com/drive/folders/13llvFwOfnCratDcbFbrMBRI5PJn0Zew5?usp=drive_link"
+        target="_blank">
+
+        <div class="icon">📈</div>
+
+        <div class="nama">
+            LAPORAN MUTU
+        </div>
+
+        <div class="keterangan">
+            Dokumen laporan mutu
+        </div>
+
+    </a>
+
+
+    <!-- LAPORAN BULANAN -->
+    <a
+        class="kartu"
+        href="https://drive.google.com/drive/folders/10AnSsg4gKNQi9kVWLl-y59IIADyzMAf_?usp=drive_link"
+        target="_blank">
+
+        <div class="icon">📅</div>
+
+        <div class="nama">
+            LAPORAN BULANAN
+        </div>
+
+        <div class="keterangan">
+            Dokumen laporan bulanan
+        </div>
+
+    </a>
+
+
+    <!-- LAPORAN TAHUNAN -->
+    <a
+        class="kartu"
+        href="https://drive.google.com/drive/folders/1Uwnqh9VvHm8SmfV-jFrxg_5qB2aVqftE?usp=drive_link"
+        target="_blank">
+
+        <div class="icon">📊</div>
+
+        <div class="nama">
+            LAPORAN TAHUNAN
+        </div>
+
+        <div class="keterangan">
+            Dokumen laporan tahunan
+        </div>
+
+    </a>
+
+</div>
+
+</body>
+</html>
